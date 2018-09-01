@@ -1,6 +1,37 @@
 var NodeLibrary = [];
 
 NodeLibrary.push({
+    nodetype: 'special/Rungler',
+    nodeclass: "ModuleRungler",
+    rpdnode : {
+        title: "Rungler ",    
+        inlets: { 
+            'clock_input': { type: 'espnode/string', default: ""} ,
+            'data_input': { type: 'espnode/string', default: ""} ,
+        },
+        outlets: { 
+            'Out': { type: 'espnode/string'} 
+        }
+    }
+});
+
+NodeLibrary.push({
+    nodetype: 'special/Comparator',
+    nodeclass: "ModuleComparator",
+    rpdnode : {
+        title: "a > b ",    
+        inlets: { 
+            'a_input': { type: 'espnode/string', default: ""} ,
+            'b_input': { type: 'espnode/string', default: ""} ,
+
+        },
+        outlets: { 
+            'Out': { type: 'espnode/string'} 
+        }
+    }
+});
+
+NodeLibrary.push({
     nodetype: 'signal/mixer3',
     nodeclass: "ModuleMixer3",
     rpdnode : {
@@ -457,6 +488,7 @@ NodeLibrary.push({
         }
     }
 });
+
 
 
 // NodeLibrary.push({
