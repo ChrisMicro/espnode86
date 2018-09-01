@@ -359,7 +359,7 @@ NodeLibrary.push({
     {
         if (conn.outlet_class === "Param")
         {
-            return   lowCaseFirst(conn.inlet_class_alias) +  "->" + conn.inlet_alias.toLowerCase() + ' = &amp;param[' + (parseInt(conn.outlet_alias.toLowerCase().replace(/\D/g,''))-1) +"];\n";
+            return   lowCaseFirst(conn.inlet_class_alias) +  "->" + conn.inlet_alias.toLowerCase() + ' = &param[' + (parseInt(conn.outlet_alias.toLowerCase().replace(/\D/g,''))-1) +"];\n";
         }else if (conn.outlet_class === "ModuleConstant") {
             return   lowCaseFirst(conn.inlet_class_alias) +  "->" + conn.inlet_alias.toLowerCase() + ' = new ModuleConstant(0)';
         }else{
