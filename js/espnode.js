@@ -1,6 +1,37 @@
 var NodeLibrary = [];
 
 NodeLibrary.push({
+    nodetype: 'special/FeedbackNext',
+    nodeclass: "ModuleFeedbackNext",
+    rpdnode : {
+        title: "FeedbackNext ",    
+        inlets: { 
+            'signal_next': { type: 'espnode/string', default: ""} ,
+            'next1': { type: 'espnode/string', default: ""} ,
+            'next2': { type: 'espnode/string', default: ""} ,
+            'next3': { type: 'espnode/string', default: ""} ,
+            'next4': { type: 'espnode/string', default: ""} ,
+        },
+        outlets: { 
+            'Out': { type: 'espnode/string'},
+        }
+    }
+});
+NodeLibrary.push({
+    nodetype: 'special/FeedbackLast',
+    nodeclass: "ModuleFeedbackLast",
+    rpdnode : {
+        title: "FeedbackLast ",    
+        inlets: { 
+            'select': { type: 'espnode/string', default: ""} ,
+        },
+        outlets: { 
+            'Out': { type: 'espnode/string'},
+
+        }
+    }
+});
+NodeLibrary.push({
     nodetype: 'special/Rungler',
     nodeclass: "ModuleRungler",
     rpdnode : {
